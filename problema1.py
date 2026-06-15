@@ -19,3 +19,9 @@ inicio_columna = 0
 fin_fila = 0
 fin_columna = 0
 
+def obtener_vidas(valor):
+    if valor == -1:
+        return 1
+    elif valor == -2:
+        return 2
+    return 0
