@@ -12,3 +12,10 @@ laberinto = [
 
 filas = 9
 columnas = 9
+
+camino = [[0] * columnas for _ in range(filas)]
+inicio_fila = 8
+inicio_columna = 0
+fin_fila = 0
+fin_columna = 0
+
