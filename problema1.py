@@ -41,3 +41,12 @@ def resolver(fila, columna, vidas):
 
     if vidas_restantes <= 0:
         return False
+    
+    camino[fila][columna] = 1
+
+    print("Posición:", fila, columna, "Vidas:", vidas_restantes)
+
+    if fila == fin_fila and columna == fin_columna:
+        return True
+
+ 
