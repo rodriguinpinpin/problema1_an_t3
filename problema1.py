@@ -49,4 +49,17 @@ def resolver(fila, columna, vidas):
     if fila == fin_fila and columna == fin_columna:
         return True
 
- 
+    if resolver(fila + 1, columna, vidas_restantes):
+        return True
+
+    if resolver(fila, columna + 1, vidas_restantes):
+        return True
+
+    if resolver(fila - 1, columna, vidas_restantes):
+        return True
+
+    if resolver(fila, columna - 1, vidas_restantes):
+        return True
+
+    camino[fila][columna] = 0
+    return False
