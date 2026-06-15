@@ -63,3 +63,19 @@ def resolver(fila, columna, vidas):
 
     camino[fila][columna] = 0
     return False
+print("LABERINTO ORIGINAL")
+
+for fila in laberinto:
+    print(fila)
+
+print("\nBuscando salida...\n")
+
+if resolver(inicio_fila, inicio_columna, 3):
+
+    print("\nSALIDA ENCONTRADA\n")
+
+    for fila in camino:
+        print(fila)
+
+else:
+    print("\nNO EXISTE UN CAMINO VÁLIDO")
