@@ -25,3 +25,19 @@ def obtener_vidas(valor):
     elif valor == -2:
         return 2
     return 0
+
+def resolver(fila, columna, vidas):
+
+    if fila < 0 or fila >= filas or columna < 0 or columna >= columnas:
+        return False
+
+    if camino[fila][columna] == 1:
+        return False
+
+    if laberinto[fila][columna] == 0:
+        return False
+
+    vidas_restantes = vidas - obtener_vidas(laberinto[fila][columna])
+
+    if vidas_restantes <= 0:
+        return False
